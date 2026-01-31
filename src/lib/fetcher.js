@@ -5,6 +5,9 @@
 export const HomePageData = async () =>{
     let data = await fetch(`/api/homepage`)
 
+    if(!data.ok){
+        throw new Error("could not fetch")
+    }
     return  data.json()
 }
 
@@ -16,5 +19,19 @@ export const HomePageData = async () =>{
 export const fetchBanners = async ()=>{
     let res = await fetch('/api/banners')
 
+    if(!data.ok){
+        throw new Error("could not fetch")
+    }
+
+    return data.json()
+}
+
+export const fetchCategory = async () =>{
+    let res = await fetch('/api/category')
+
+    if(!data.ok){
+        throw new Error("could not fetch")
+    }
+    
     return data.json()
 }

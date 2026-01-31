@@ -6,29 +6,40 @@
 
 
 /**
- * 
  * @typedef {Object} data - payload
- * @property {String} id - id
- * ......others
- * 
+ * @property {String} name
+ * @property {String} phone : not null
+ * @property {String} email
+ * @property {String} address
+ * @property {string} city
+ * @property {String} state
+ * @property {String} pincode
+ * @property {String} password
  * @returns {Promise<Boolean>}
  */
 export const UserRegister = async (data)=>{
-    let res = await fetch('/api/auth/register',{
-        method: "post",
-        "body": data.stringify(),
+    console.log("data");
+    let res = await fetch('https://localhost:8081/api/auth/register',{
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json",
+        },
     })
 
-    if(res.ok){
-        return res.json();
-    }else{
-        return Error("Submission problem");
+     if (!res.ok) {
+        const err = await res.text()
+        throw new Error(err)
     }
+
+    return await res.json()    
 }
 
 /**
  * 
  * @typedef {Object} data 
+ * @property {String} email
+ * @property {String} password
  * @returns {Promise<Boolean>}
  */
 export const UserLogin = async (data) => {
@@ -80,7 +91,6 @@ export const UpdateUser = async (data,id) => {
 }
 
 /**
- * 
  * @param {String} id - User Id
  * @returns {Promise<boolean>}
  */

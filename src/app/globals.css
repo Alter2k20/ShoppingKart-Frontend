@@ -40,6 +40,7 @@ label{
 .button:hover{
   background-color: #4338CA;
   cursor: pointer;
+  color: white;
 }
 
 .textbox{
@@ -56,4 +57,26 @@ color: #0F172A;
 
 .card{
   background-color: #FFFFFF;
+}
+
+form{
+  /* grid grid-rows-7 p-4 m-4 w-[40vw] h-[60vh] border-0 rounded items-center */
+  display: grid;
+  gap: 4px;
+  padding: 4em;
+  /* margin: 4em; */
+  border: 1px solid black;
+  border-radius: 16px;
+  /* justify-items: center; */
+}
+
+.formcontainer{
+  /* m-2 flex felx-col justify-center items-center w-full h-full */
+  /* margin: 4px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  /* height: 100%; */
 }

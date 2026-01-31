@@ -17,7 +17,7 @@ export default function Btn({name, type, url, callback}){
         );
     } else {
         return (
-            <button className="button w-full p-1 transition duration-500 border-0 rounded" type={type} onClick={callback}>
+            <button className="button w-full p-1 transition duration-500 border-0 rounded col-span-2 m-2" type={type} onClick={callback}>
                 {name}
             </button>
         );
