@@ -20,7 +20,7 @@ const baseString = 'http://localhost:8081'
  */
 export const UserRegister = async (data)=>{
     console.log("data");
-    let res = await fetch('https://localhost:8081/api/auth/register',{
+    let res = await fetch(baseString+'/api/auth/register',{
         method: "POST",
         body: JSON.stringify(data),
         headers: {
