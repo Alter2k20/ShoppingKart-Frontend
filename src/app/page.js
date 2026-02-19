@@ -19,7 +19,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="grid place-items-center p-4 font-sans">
+    <div className="grid place-items-center p-4 font-sans overflow-y-scroll">
       <main>
         {data ? (
           <pre>{JSON.stringify(data, null, 2)}</pre>

@@ -11,14 +11,15 @@ const baseString = 'http://localhost:8081'
  * @returns {Promise}
  */
 export const getProducts = async () =>{
-    let res = await fetch(baseString+"/")
+    let res = await fetch(baseString+"/api/products")
 
     if (!res.ok) {
         const err = await res.text();
         throw new Error(err);
     }
 
-    return JSON.parse(res.json())
+    // console.log(res.json())
+    return res.json()
 }
 
 /**
