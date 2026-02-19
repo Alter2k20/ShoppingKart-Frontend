@@ -4,6 +4,7 @@
  * 
  */
 
+const baseString = 'http://localhost:8081'
 
 /**
  * @typedef {Object} data - payload
@@ -17,23 +18,24 @@
  * @property {String} password
  * @returns {Promise<Boolean>}
  */
-export const UserRegister = async (data)=>{
-    console.log("data");
-    let res = await fetch('https://localhost:8081/api/auth/register',{
+export const UserRegister = async (data) => {
+    // console.log(data);
+
+    let res = await fetch(baseString+'/api/users', {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
             "Content-Type": "application/json",
         },
-    })
+    });
 
-     if (!res.ok) {
-        const err = await res.text()
-        throw new Error(err)
+    if (!res.ok) {
+        const err = await res.text();
+        throw new Error(err);
     }
 
-    return await res.json()    
-}
+    return await res.json();
+};
 
 /**
  * 
@@ -43,7 +45,7 @@ export const UserRegister = async (data)=>{
  * @returns {Promise<Boolean>}
  */
 export const UserLogin = async (data) => {
-    let res = await fetch('/api/auth/login',{
+    let res = await fetch(baseString+'/api/users',{
         method: "post",
         "body": data,
     })
@@ -61,7 +63,7 @@ export const UserLogin = async (data) => {
  * @returns {Promise<Object>} - User Data
  */
 export const GetUser = async (id) => {
-    let res = await fetch(`/api/users/${id}`)
+    let res = await fetch(baseString+`/api/users/${id}`)
 
     if(!res.ok){
         throw new  Error("Submission problem");
@@ -78,7 +80,7 @@ export const GetUser = async (id) => {
  * @returns {Promise<Boolean>}
  */
 export const UpdateUser = async (data,id) => {
-    let res = await fetch(`/api/users/${id}`,{
+    let res = await fetch(baseString+`/api/users/${id}`,{
         method : "PUT",
         body : data
     })
@@ -95,7 +97,7 @@ export const UpdateUser = async (data,id) => {
  * @returns {Promise<boolean>}
  */
 export const DeleteUser = async (id) => {
-    let res = await fetch(`/api/users/${data}`,{
+    let res = await fetch(baseString+`/api/users/${data}`,{
         method : "delete",
     })
 

@@ -125,3 +125,73 @@
 `↓`  
 `Order Confirmed`
 
+```java
+public class Products {
+
+    @Id
+    private ObjectId pid;
+
+    @NonNull
+    private String title;
+
+    @NonNull
+    private String description;
+
+    @NonNull
+    private String category;
+
+    @NonNull
+    private ObjectId categoryId;
+
+    @NonNull
+    private Double price;
+
+    private Double discount_price;
+
+    @NonNull
+    private Integer Stock;
+
+    @NonNull
+    private String image;
+
+    @NonNull
+    private Double rating;
+
+}
+```
+
+```java
+public class Order {
+
+    @Id
+    private ObjectId id;
+
+    private ObjectId userId;
+
+    @DBRef
+    private List<OrderItem> items = new ArrayList<>();
+
+    private Double totalAmount;
+
+    private String status;
+
+    private Instant orderDate;
+
+    private String deliveryAddress;
+}
+
+
+public class OrderItem {
+
+    @Id
+    private ObjectId productId;
+
+    private String productTitle;
+
+    private Double price;
+
+    private Integer quantity;
+
+    private Double totalPrice;
+}
+```
