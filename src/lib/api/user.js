@@ -18,10 +18,9 @@ const baseString = 'http://localhost:8081'
  * @property {String} password
  * @returns {Promise<Boolean>}
  */
-export const UserRegister = async (data) => {
-    // console.log(data);
-
-    let res = await fetch(baseString+'/api/users', {
+export const UserRegister = async (data)=>{
+    console.log("data");
+    let res = await fetch('https://localhost:8081/api/auth/register',{
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -34,8 +33,8 @@ export const UserRegister = async (data) => {
         throw new Error(err);
     }
 
-    return await res.json();
-};
+    return await res.json()    
+}
 
 /**
  * 
