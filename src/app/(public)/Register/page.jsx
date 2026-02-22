@@ -5,6 +5,7 @@ import { useState } from "react"
 import Btn from "@/app/components/general/Btn"
 
 import { UserRegister } from "@/lib/api/user"
+import { MerchantRegister } from "@/lib/api/merchant"
 
 export default function Register() {
     const [merchant, setMerchant] = useState(false)
@@ -49,20 +50,20 @@ export default function Register() {
         e.preventDefault()
         let res
         const payload = buildPayload()
-        alert(JSON.stringify(payload, null, 2))
+        // alert(JSON.stringify(payload, null, 2))
         try {
             if (merchant) {
-                // res = await MerchantRegister(payload)
+                res = await MerchantRegister(payload)
             } else {
                 res = await UserRegister(payload)
             }
 
-            alert("Registration successful")
+            // alert("Registration successful")
         } catch (err) {
             console.error(err)
-            alert("Registration failed")
+            // alert("Registration failed")
         }
-        localStorage.setItem("val",res)
+        // localStorage.setItem("val",res)
     }
 
     return (
@@ -101,7 +102,7 @@ export default function Register() {
                         <input type="text" name="org" id="org" className="textbox outline-none border rounded pl-1" required />
                     </> : <></>}
                 <Btn name="Sign up" type="submit" />
-                <Btn name="Forgot password ?" url="/Customer/Forgot" />
+                <Btn name="Forgot password ?" url="/Forgot" />
             </form>
         </div>
     )
