@@ -5,21 +5,22 @@
  */
 
 const baseString = 'http://localhost:8081'
+import dummydata from "@/lib/dummy/products.json"
 
 /**
  * Get all products in db
  * @returns {Promise}
  */
 export const getProducts = async () =>{
-    let res = await fetch(baseString+"/api/products")
+    // let res = await fetch(baseString+"/api/products")
 
-    if (!res.ok) {
-        const err = await res.text();
-        throw new Error(err);
-    }
+    // if (!res.ok) {
+    //     const err = await res.text();
+    //     throw new Error(err);
+    // }
 
     // console.log(res.json())
-    return res.json()
+    return dummydata
 }
 
 /**

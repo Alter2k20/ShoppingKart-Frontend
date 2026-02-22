@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "iPhone 15 Pro",
+    "description": "Apple iPhone 15 Pro with A17 Pro chip and 128GB storage",
+    "price": 134900,
+    "discount_price": 129900,
+    "category": "Mobiles",
+    "rating": 4.8,
+    "stock": 25
+  },
+  {
+    "id": 2,
+    "title": "Samsung Galaxy S24",
+    "description": "Samsung flagship smartphone with AMOLED display",
+    "price": 89999,
+    "discount_price": 79999,
+    "category": "Mobiles",
+    "rating": 4.6,
+    "stock": 40
+  },
+  {
+    "id": 3,
+    "title": "Sony WH-1000XM5",
+    "description": "Industry leading noise cancelling headphones",
+    "price": 29990,
+    "discount_price": 24990,
+    "category": "Electronics",
+    "rating": 4.7,
+    "stock": 15
+  },
+  {
+    "id": 4,
+    "title": "ASUS ROG Strix G16",
+    "description": "Gaming laptop with Intel i7 and RTX 4060",
+    "price": 145000,
+    "discount_price": 135000,
+    "category": "Computers",
+    "rating": 4.5,
+    "stock": 8
+  },
+  {
+    "id": 5,
+    "title": "Nike Air Max",
+    "description": "Comfortable running shoes for daily wear",
+    "price": 9999,
+    "discount_price": 7499,
+    "category": "Fashion",
+    "rating": 4.3,
+    "stock": 0
+  },
+  {
+    "id": 6,
+    "title": "Boat Rockerz 450",
+    "description": "Budget wireless headphones with deep bass",
+    "price": 3999,
+    "discount_price": 1499,
+    "category": "Electronics",
+    "rating": 4.1,
+    "stock": 120
+  },
+  {
+    "id": 7,
+    "title": "Dell 24 inch Monitor",
+    "description": "Full HD IPS monitor with ultra thin bezels",
+    "price": 15999,
+    "discount_price": 12999,
+    "category": "Computers",
+    "rating": 4.4,
+    "stock": 18
+  },
+  {
+    "id": 8,
+    "title": "Puma Hoodie",
+    "description": "Cotton hoodie for winter wear",
+    "price": 4999,
+    "discount_price": 2999,
+    "category": "Fashion",
+    "rating": 4.2,
+    "stock": 50
+  }
+]
