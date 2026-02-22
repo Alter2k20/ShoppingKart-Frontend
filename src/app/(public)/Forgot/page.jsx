@@ -1,7 +1,7 @@
 "use client"
 import {useState} from "react"
 
-import Btn from "@/app/components/general/Btn"
+import Btn from "@/components/general/Btn"
 
 export default function Forgot(){
 

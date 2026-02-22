@@ -195,3 +195,49 @@ public class OrderItem {
     private Double totalPrice;
 }
 ```
+
+```
+src/
+ ├ app/
+ │   ├ (public)/
+ │   │   ├ page.js              // home
+ │   │   ├ product/[id]/page.js
+ │   │   ├ category/[id]/page.js
+ │   │
+ │   ├ customer/
+ │   │   ├ cart/page.js
+ │   │   ├ orders/page.js
+ │   │   ├ profile/page.js
+ │   │
+ │   ├ merchant/
+ │
+ │   ├ layout.js
+ │
+ ├ components/
+ │   ├ ui/                     // reusable UI
+ │   │   ├ Btn.jsx
+ │   │   ├ Carousel.jsx
+ │
+ │   ├ product/
+ │   │   ├ ProductCard.jsx
+ │   │   ├ ProductGrid.jsx
+ │
+ │   ├ cart/
+ │   │   ├ CartItem.jsx
+ │
+ │   ├ layout/
+ │   │   ├ Navbar.jsx
+ │   │   ├ Footer.jsx
+ │
+ ├ lib/
+ │   ├ api/
+ │   │   ├ product.js
+ │   │   ├ user.js
+ │   │   ├ merchant.js
+ │   │
+ │   ├ fetcher.js
+ │
+ ├ store/                     // global state
+ │   ├ cartStore.js
+ │   ├ userStore.js
+```

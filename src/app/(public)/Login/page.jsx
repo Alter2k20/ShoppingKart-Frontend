@@ -1,4 +1,4 @@
-import Btn from "@/app/components/general/Btn"
+import Btn from "@/components/general/Btn"
 
 
 

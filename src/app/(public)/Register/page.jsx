@@ -2,7 +2,7 @@
 import { useState } from "react"
 
 
-import Btn from "@/app/components/general/Btn"
+import Btn from "@/components/general/Btn"
 
 import { UserRegister } from "@/lib/api/user"
 import { MerchantRegister } from "@/lib/api/merchant"

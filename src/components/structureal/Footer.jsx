@@ -1,5 +1,4 @@
 import Link from "next/link";
-import About from "../../(public)/About/page";
 
 export default function Footer(){
     return(
