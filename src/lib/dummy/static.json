@@ -1,0 +1,30 @@
+[
+   {
+      "id": 1,
+      "name" : "Electronics"
+   },
+   {
+      "id": 2,
+      "name" : "Fashion"
+   },
+   {
+      "id": 3,
+      "name" : "Books"
+   },
+   {
+      "id": 4,
+      "name" :"Mobile"
+   },
+   {
+      "id": 5,
+      "name" : "Laptop"
+   },
+   {
+      "id": 6,
+      "name":"Smart Device"
+   },
+   {
+      "id": 7,
+      "name" : "Home appliances"
+   }
+]
